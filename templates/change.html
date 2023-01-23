@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/change.css') }}">
+{% endblock %}
+
+{% block title %}
+    Данные
+{% endblock %}
+
+{% block body %}
+    <h2 style="text-align: center">Данные о товаре</h2>
+    <form method="post" enctype = "multipart/form-data" class="forms">
+        <h5>Название</h5>
+        <div class="input-group has-validation" style="width: 400px">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Название" value="{{ info[0] }}">
+        </div><br>
+        <h5>Описание</h5>
+        <div class="input-group has-validation" style="width: 400px">
+            <input type="text" class="form-control" name="info" id="info" placeholder="Описание" value="{{ info[1] }}">
+        </div><br>
+        <div class="form-check form-switch" style="margin-top: 20px;">
+          {% if info[2] == 1 %}
+          <input class="form-check-input" type="checkbox" id="checkBox" name="checkBox" checked>
+          {% else %}
+          <input class="form-check-input" type="checkbox" id="checkBox" name="checkBox">
+          {% endif %}
+          <label class="form-check-label" for="checkBox">Есть ли в наличии</label>
+        </div>
+        <h5 style="margin-top: 20px;">Стоимость (вместе с размерностью)</h5>
+        <div class="input-group has-validation" style="width: 400px">
+            <input type="text" class="form-control" name="cost" id="cost" placeholder="Стоимость" value="{{ info[3] }}">
+        </div><br>
+        <ul class="hrBut">
+           <li><button type="submit" name = 'action' class="btn btn-outline-success" style="margin-bottom: 20px" value="Save">Сохранить</button></li>
+        </ul><br>
+    </form>
+{% endblock %}

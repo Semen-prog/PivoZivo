@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
+{% endblock %}
+
+{% block title %}
+    Новый товар
+{% endblock %}
+
+{% block body %}
+    <h2 style="text-align: center">Добавить новый товар</h2>
+    <form method="post" enctype = "multipart/form-data" class="forms">
+        <h5>Название</h5>
+        <div class="input-group has-validation" style="width: 400px">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Название" value="">
+        </div><br>
+        <h5>Описание</h5>
+        <div class="input-group has-validation" style="width: 400px">
+            <input type="text" class="form-control" name="info" id="info" placeholder="Описание" value="">
+        </div><br>
+        <h5 style="margin-top: 20px;">Стоимость (вместе с размерностью)</h5>
+        <div class="input-group has-validation" style="width: 400px">
+            <input type="text" class="form-control" name="cost" id="cost" placeholder="Стоимость" value="">
+        </div><br>
+        <ul class="hrBut">
+           <li><button type="submit" class="btn btn-outline-success" style="margin-bottom: 20px">Сохранить</button></li>
+        </ul><br>
+    </form>
+{% endblock %}

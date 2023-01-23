@@ -1,0 +1,17 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.head-text {
+    margin-left: 20px;
+    background-color: #ffffff;
+    padding-left: 10px;
+    width: 270px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 20px;
+    margin-left: 30px;
+}

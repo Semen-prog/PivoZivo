@@ -1,0 +1,31 @@
+ul.hr {
+    margin: 0;
+    padding: 4px;
+    display: inline-block;
+   }
+ul.hr li {
+    float: left;
+    margin-right: 20px;
+    width: 85px;
+    list-style: none;
+}
+
+.forms {
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+h5 {
+    margin-bottom: 20px;
+}
+
+ul.hrBut {
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+}
+ul.hrBut li {
+    float: left;
+    margin-right: 20px;
+    list-style: none;
+}

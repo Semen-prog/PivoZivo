@@ -1,0 +1,19 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.head-text {
+    margin-left: 20px;
+    background-color: #ffffff;
+    padding-left: 10px;
+    width: 270px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}

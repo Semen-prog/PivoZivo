@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Пиво Живо. Главная{% endblock %}
+
+{% block style %}<link href="{{url_for('static', filename = 'css/main.css')}}" rel="stylesheet">{% endblock %}
+
+
+{% block body %}
+
+<h2 style="text-align: center">Каталог товаров</h2>
+    <a href="new">
+        <button type="button" class="btn btn-outline-success plus-but">+ Добавить товар</button>
+    </a>
+    <div class="tableClass"><table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Номер</th>
+            <th scope="col">Название</th>
+            <th scope="col">Стоимость</th>
+            <th scope="col">Есть в наличии</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for el in data %}
+            <tr>
+                <th scope="row">{{ el[0] }}</th>
+                <td>{{ el[1] }}</td>
+                <td>{{ el[4] }}</td>
+                {% if el[2] %}
+                <td><span class="badge badge-danger" style="background-color: #009403">+</span></td>
+                {% else %}
+                <td><span class="badge badge-danger" style="background-color: #c00000">x</span></td>
+                {% endif %}
+                <td><a href="{{ el[3] }}">
+                    <button type="button" class="btn btn-outline-danger">Изменить</button>
+                </a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table></div>
+{% endblock %}
